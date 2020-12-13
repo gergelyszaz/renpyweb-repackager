@@ -1,0 +1,16 @@
+# action.yml
+name: 'Ren'py Web Repackage Tool'
+description: ''
+inputs:
+  web-zip-file:  # id of input
+    description: ''
+    required: true
+    default: '-web.zip'
+outputs:
+  web-zip-file: # id of output
+    description: 'The new -web.zip file inlcuding the web files.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.web-zip-file }}
