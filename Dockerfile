@@ -8,4 +8,4 @@ RUN apk --no-cache add zip \
     && rm /web.zip
 
 COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT [ "sh", "/entrypoint.sh" ]
